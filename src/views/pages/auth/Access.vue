@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import FloatingConfigurator from '@/components/FloatingConfigurator.vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import type { Ref } from 'vue';
+import { useAppStore } from '@/store';
+
+const appStore = useAppStore()
+
+onMounted(() => {
+    appStore.init({ auth: { user: { name: "luis" } } });
+})
 
 const companies: Ref<string[]> = ref([
     'Km Motos',

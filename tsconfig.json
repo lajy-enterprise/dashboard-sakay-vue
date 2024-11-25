@@ -21,6 +21,9 @@
         "src/**/*.vue",
         "tests/**/*.ts",
         "tests/**/*.tsx",
-        "components.d.ts"
+        "components.d.ts",
+        "src/store/AppStore.ts.old",
+        "src/store/AppStore.ts.old",
+        "src/store/AppStore.ts.old"
     ]
 }
