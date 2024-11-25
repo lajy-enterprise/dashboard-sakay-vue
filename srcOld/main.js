@@ -7,21 +7,12 @@ import PrimeVue from 'primevue/config';
 import ConfirmationService from 'primevue/confirmationservice';
 import ToastService from 'primevue/toastservice';
 
-import { createPinia } from 'pinia';
-import createPersistedState from 'pinia-plugin-persistedstate';
-
 import '@/assets/styles.scss';
 import '@/assets/tailwind.css';
-
-const pinia = createPinia();
-pinia.use(
-    createPersistedState,
-);
 
 const app = createApp(App);
 
 app.use(router);
-app.use(pinia);
 app.use(PrimeVue, {
     theme: {
         preset: Aura,
